@@ -31,7 +31,7 @@ class CustomerResource extends Resource
             ->schema([
                 Card::make()->schema([
                     TextInput::make('name')->required()->maxLength(255)->label('Nama Pelanggan'),
-                    Textarea::make('adress')->required()->maxLength(255)->label('Alamat'),
+                    Textarea::make('address')->required()->maxLength(255)->label('Alamat'),
                     TextInput::make('phone')->required()->maxLength(255)->label('Nomer Telepon'),
                 ])
             ]);
@@ -42,7 +42,7 @@ class CustomerResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')->searchable()->label('Nama Pelanggan'),
-                TextColumn::make('adress')->label('Alamat'),
+                TextColumn::make('address')->label('Alamat'),
                 TextColumn::make('phone')->label('Nomer Telepon'),
             ])
             ->filters([
